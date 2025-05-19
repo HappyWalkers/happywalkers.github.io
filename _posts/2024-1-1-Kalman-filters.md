@@ -1,5 +1,5 @@
 ---
-Implement Kalman Filters From Scratch
+title: Implement Kalman Filters From Scratch
 
 article_header:
   type: cover
