@@ -8,8 +8,8 @@ article_header:
 
 tags: Robotics
 cover: https://s2.loli.net/2025/05/19/URSa32fTQ5nmjCD.png
-coverWidth: 1200
-coverHeight: 750
+coverWidth: 400
+coverHeight: 250
 ---
 
 # Report
