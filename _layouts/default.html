@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    {% seo %}
+
+    {% if page.cover %}
+      {% assign social_image = page.cover %}
+      {% unless social_image contains '://' %}
+        {% assign social_image = social_image | absolute_url %}
+      {% endunless %}
+      <meta property="og:image" content="{{ social_image }}">
+    {% endif %}
+
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-name" href="{{ '/' | relative_url }}">
+          {{ site.author.name | default: site.title }}
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="{{ '/' | relative_url }}">Posts</a>
+        </nav>
+      </header>
+
+      <main id="main-content" class="site-main" tabindex="-1">
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <p class="back-link"><a href="{{ '/' | relative_url }}">← Back to posts</a></p>
+    <h1 itemprop="headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: site.date_format }}
+      </time>
+      {% if page.tags and page.tags != empty %}
+        <span aria-hidden="true">·</span>
+        <span class="post-tags">{{ page.tags | join: ' · ' }}</span>
+      {% endif %}
+    </p>
+  </header>
+
+  {% if page.cover %}
+    {% assign cover_url = page.cover %}
+    {% unless cover_url contains '://' %}
+      {% assign cover_url = cover_url | relative_url %}
+    {% endunless %}
+    <figure class="post-cover">
+      <img
+        src="{{ cover_url }}"
+        alt="{{ page.cover_alt | default: page.title | escape }}"
+        decoding="async">
+    </figure>
+  {% endif %}
+
+  <div class="prose" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <a href="https://github.com/{{ site.repository }}/edit/{{ site.repository_branch }}/{{ page.path }}">
+      Edit this post on GitHub
+    </a>
+  </footer>
+</article>

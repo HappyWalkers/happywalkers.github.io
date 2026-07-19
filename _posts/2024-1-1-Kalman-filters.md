@@ -1,15 +1,9 @@
 ---
 title: Implement Kalman Filters From Scratch
-
-article_header:
-  type: cover
-  image:
-    src: https://s2.loli.net/2025/05/19/URSa32fTQ5nmjCD.png
-
-tags: Robotics
-cover: https://s2.loli.net/2025/05/19/URSa32fTQ5nmjCD.png
-coverWidth: 400
-coverHeight: 250
+tags:
+  - Robotics
+cover: /assets/images/covers/Kalman-filters.png
+thumbnail: /assets/images/thumbnails/Kalman-filters.jpg
 ---
 
 # Report

@@ -1,0 +1,51 @@
+{% if include.posts and include.posts != empty %}
+  <ol class="post-list">
+    {% for post in include.posts %}
+      <li>
+        <article class="post-row" itemscope itemtype="https://schema.org/BlogPosting">
+          <a
+            class="post-row__thumbnail"
+            href="{{ post.url | relative_url }}"
+            aria-hidden="true"
+            tabindex="-1">
+            {% if post.thumbnail or post.cover %}
+              {% assign thumbnail_url = post.thumbnail | default: post.cover %}
+              {% unless thumbnail_url contains '://' %}
+                {% assign thumbnail_url = thumbnail_url | relative_url %}
+              {% endunless %}
+              <img
+                src="{{ thumbnail_url }}"
+                alt=""
+                loading="lazy"
+                decoding="async">
+            {% else %}
+              <span aria-hidden="true">{{ post.title | slice: 0 }}</span>
+            {% endif %}
+          </a>
+
+          <div class="post-row__body">
+            <h3>
+              <a itemprop="url" href="{{ post.url | relative_url }}">
+                <span itemprop="headline">{{ post.title | escape }}</span>
+              </a>
+            </h3>
+            <p class="post-meta">
+              <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: site.date_format }}
+              </time>
+              {% if post.tags and post.tags != empty %}
+                <span aria-hidden="true">·</span>
+                <span class="post-tags">{{ post.tags | join: ' · ' }}</span>
+              {% endif %}
+            </p>
+            {% if post.summary %}
+              <p class="post-row__summary" itemprop="description">{{ post.summary }}</p>
+            {% endif %}
+          </div>
+        </article>
+      </li>
+    {% endfor %}
+  </ol>
+{% else %}
+  <p>No posts yet.</p>
+{% endif %}

@@ -1,15 +1,9 @@
 ---
 title: Neural Radiance Fields (NeRF)
-
-article_header:
-  type: cover
-  image:
-    src: https://s2.loli.net/2025/05/19/KTGsY81kDj2PH75.png
-
-tags: Robotics
-cover: https://s2.loli.net/2025/05/19/KTGsY81kDj2PH75.png
-coverWidth: 1200
-coverHeight: 750
+tags:
+  - Robotics
+cover: /assets/images/covers/NeRF.png
+thumbnail: /assets/images/thumbnails/NeRF.jpg
 ---
 
 # Report

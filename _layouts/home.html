@@ -1,43 +1,39 @@
 ---
-layout: articles
-titles:
-  # @start locale config
-  en      : &EN       Home
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  zh-Hans : &ZH_HANS  主页
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
-  zh-Hant : &ZH_HANT  主頁
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
-  ko      : &KO       홈
-  ko-KR   : *KO
-  fr      : &FR       Accueil
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
-  tr      : &TR       Ana Sayfa
-  # @end locale config
-show_title: false
-articles:
-  data_source: paginator.posts
-  article_type: BlogPosting
-  show_cover: true
-  show_excerpt: true
-  show_readmore: false
-  show_info: true
+layout: default
 ---
-<div class="layout--home">
-  {%- include paginator.html -%}
-</div>
-<script>
-  {%- include scripts/home.js -%}
-</script>
 
-{{ content }}
+<section class="profile" aria-labelledby="profile-name">
+  {% if site.author.avatar %}
+    {% assign avatar_url = site.author.avatar %}
+    {% unless avatar_url contains '://' %}
+      {% assign avatar_url = avatar_url | relative_url %}
+    {% endunless %}
+    <img
+      class="profile__photo"
+      src="{{ avatar_url }}"
+      alt="Profile image for {{ site.author.name | escape }}"
+      width="240"
+      height="300">
+  {% endif %}
+
+  <div class="profile__details">
+    <h1 id="profile-name">{{ site.author.name | default: site.title }}</h1>
+    <p class="profile__bio">{{ site.author.bio }}</p>
+    <p class="profile__links">
+      <a href="mailto:{{ site.author.email }}">Email</a>
+      <span aria-hidden="true">·</span>
+      <a href="{{ site.author.cv | relative_url }}">CV</a>
+      <span aria-hidden="true">·</span>
+      <a rel="me" href="{{ site.author.github }}">GitHub</a>
+      <span aria-hidden="true">·</span>
+      <a rel="me" href="{{ site.author.linkedin }}">LinkedIn</a>
+    </p>
+
+    {{ content }}
+  </div>
+</section>
+
+<section aria-labelledby="posts-heading">
+  <h2 id="posts-heading">Posts</h2>
+  {% include post-list.html posts=site.posts %}
+</section>

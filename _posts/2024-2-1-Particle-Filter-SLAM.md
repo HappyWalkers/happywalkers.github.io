@@ -1,15 +1,9 @@
 ---
 title: LiDAR-based Particle Filter SLAM
-
-article_header:
-  type: cover
-  image:
-    src: https://s2.loli.net/2025/05/19/5Sk4Jx6mMrwvXWY.jpg
-
-tags: Robotics
-cover: https://s2.loli.net/2025/05/19/5Sk4Jx6mMrwvXWY.jpg
-coverWidth: 1200
-coverHeight: 750
+tags:
+  - Robotics
+cover: /assets/images/covers/Particle-Filter-SLAM.jpg
+thumbnail: /assets/images/thumbnails/Particle-Filter-SLAM.jpg
 ---
 
 # Report
