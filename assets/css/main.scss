@@ -224,6 +224,10 @@ h3 {
   object-fit: cover;
 }
 
+.post-row__thumbnail img.post-row__thumbnail-image--contain {
+  object-fit: contain;
+}
+
 .post-row__body {
   min-width: 0;
   padding-top: 0.05rem;

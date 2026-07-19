@@ -14,6 +14,7 @@
                 {% assign thumbnail_url = thumbnail_url | relative_url %}
               {% endunless %}
               <img
+                {% if post.thumbnail_fit == 'contain' %}class="post-row__thumbnail-image--contain"{% endif %}
                 src="{{ thumbnail_url }}"
                 alt=""
                 loading="lazy"
