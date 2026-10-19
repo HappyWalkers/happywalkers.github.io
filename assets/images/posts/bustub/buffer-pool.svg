@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 632" width="760" height="632" role="img" aria-label="BusTub buffer pool manager: callers ask for page ids and get page guards; page table, frames, ARC replacer and free list; disk scheduler queue and worker thread">
+<title>BusTub buffer pool manager: callers ask for page ids and get page guards; page table, frames, ARC replacer and free list; disk scheduler queue and worker thread</title>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a4a46"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f8f5a"/></marker>
+<marker id="ahk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a7a74"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0504d"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#dcdcd6" stroke-width="3"/></pattern>
+</defs>
+<rect x="0" y="0" width="760" height="632" fill="#ffffff"/>
+<rect x="20" y="15" width="230" height="48" rx="6" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="30" y="35" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">B+tree</text>
+<text x="30" y="52" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">inner and leaf pages</text>
+<line x1="107" y1="64" x2="107" y2="99" stroke="#7a7a74" stroke-width="1.3" marker-end="url(#ahk)"/>
+<line x1="163" y1="99" x2="163" y2="65" stroke="#3f8f5a" stroke-width="1.3" marker-end="url(#ahg)"/>
+<text x="99" y="87" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="end" xml:space="preserve" style="white-space:pre">page id</text>
+<text x="171" y="87" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#3f8f5a" text-anchor="start" xml:space="preserve" style="white-space:pre">page guard</text>
+<rect x="265" y="15" width="230" height="48" rx="6" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="275" y="35" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">Table heap</text>
+<text x="275" y="52" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">tuple pages</text>
+<line x1="352" y1="64" x2="352" y2="99" stroke="#7a7a74" stroke-width="1.3" marker-end="url(#ahk)"/>
+<line x1="408" y1="99" x2="408" y2="65" stroke="#3f8f5a" stroke-width="1.3" marker-end="url(#ahg)"/>
+<text x="344" y="87" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="end" xml:space="preserve" style="white-space:pre">page id</text>
+<text x="416" y="87" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#3f8f5a" text-anchor="start" xml:space="preserve" style="white-space:pre">page guard</text>
+<rect x="510" y="15" width="230" height="48" rx="6" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="520" y="35" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">Executors</text>
+<text x="520" y="52" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">sort runs, hash partitions</text>
+<line x1="597" y1="64" x2="597" y2="99" stroke="#7a7a74" stroke-width="1.3" marker-end="url(#ahk)"/>
+<line x1="653" y1="99" x2="653" y2="65" stroke="#3f8f5a" stroke-width="1.3" marker-end="url(#ahg)"/>
+<text x="589" y="87" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="end" xml:space="preserve" style="white-space:pre">page id</text>
+<text x="661" y="87" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#3f8f5a" text-anchor="start" xml:space="preserve" style="white-space:pre">page guard</text>
+<rect x="20" y="100" width="720" height="272" rx="6" fill="#fcf3e0" stroke="#d2ac5c" stroke-width="1.3"/>
+<text x="34" y="124" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">BufferPoolManager</text>
+<rect x="709" y="106" width="25" height="18" rx="9" fill="#3d4a5c"/>
+<text x="721.4" y="119" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle" xml:space="preserve" style="white-space:pre">P1</text>
+<text x="34" y="146" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">NewPage()  ReadPage(id)  WritePage(id)  FlushPage(id)  DeletePage(id)</text>
+<rect x="34" y="162" width="200" height="150" rx="6" fill="#fff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="44" y="182" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">page_table_</text>
+<text x="44" y="207" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">page 7  → frame 0</text>
+<text x="44" y="231" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">page 3  → frame 1</text>
+<text x="44" y="255" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">page 12 → frame 3</text>
+<text x="44" y="286" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">resident pages only;</text>
+<text x="44" y="302" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">absent id → disk read</text>
+<text x="262" y="182" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">frames_</text>
+<rect x="262" y="192" width="278" height="30" rx="4" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<line x1="300" y1="192" x2="300" y2="222" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="395" y1="192" x2="395" y2="222" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="465" y1="192" x2="465" y2="222" stroke="#d4d4ce" stroke-width="1"/>
+<text x="281" y="212" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">0</text>
+<text x="310" y="212" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">page 7</text>
+<text x="405" y="212" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">pin 2</text>
+<text x="475" y="212" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">clean</text>
+<rect x="262" y="228" width="278" height="30" rx="4" fill="#fff7f6" stroke="#9a9a94" stroke-width="1.3"/>
+<line x1="300" y1="228" x2="300" y2="258" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="395" y1="228" x2="395" y2="258" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="465" y1="228" x2="465" y2="258" stroke="#d4d4ce" stroke-width="1"/>
+<text x="281" y="248" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">1</text>
+<text x="310" y="248" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">page 3</text>
+<text x="405" y="248" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#c0504d" text-anchor="start" xml:space="preserve" style="white-space:pre">pin 0</text>
+<text x="475" y="248" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#c0504d" text-anchor="start" xml:space="preserve" style="white-space:pre">dirty</text>
+<rect x="262" y="264" width="278" height="30" rx="4" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<line x1="300" y1="264" x2="300" y2="294" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="395" y1="264" x2="395" y2="294" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="465" y1="264" x2="465" y2="294" stroke="#d4d4ce" stroke-width="1"/>
+<text x="281" y="284" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">2</text>
+<text x="310" y="284" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre"></text>
+<text x="405" y="284" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre"></text>
+<text x="475" y="284" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">free</text>
+<rect x="262" y="300" width="278" height="30" rx="4" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<line x1="300" y1="300" x2="300" y2="330" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="395" y1="300" x2="395" y2="330" stroke="#d4d4ce" stroke-width="1"/>
+<line x1="465" y1="300" x2="465" y2="330" stroke="#d4d4ce" stroke-width="1"/>
+<text x="281" y="320" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">3</text>
+<text x="310" y="320" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">page 12</text>
+<text x="405" y="320" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">pin 1</text>
+<text x="475" y="320" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">clean</text>
+<text x="262" y="355" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">each FrameHeader: rwlatch_ · pin_count_ · is_dirty_ · data_ (8 KiB)</text>
+<rect x="570" y="162" width="155" height="88" rx="6" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="580" y="182" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">ArcReplacer</text>
+<text x="580" y="199" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">tracks accesses;</text>
+<text x="580" y="215" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">Evict() picks a</text>
+<text x="580" y="231" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">pin-0 frame (Fig. 3)</text>
+<rect x="570" y="262" width="155" height="50" rx="6" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="580" y="282" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">free_frames_</text>
+<text x="580" y="299" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">frame 2</text>
+<line x1="540" y1="243" x2="569" y2="222" stroke="#c0504d" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ahr)"/>
+<line x1="540" y1="279" x2="569" y2="287" stroke="#4a4a46" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+<line x1="200" y1="372" x2="200" y2="429" stroke="#4a4a46" stroke-width="1.3" marker-end="url(#ah)"/>
+<text x="208" y="398" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">Schedule(requests)</text>
+<line x1="430" y1="481" x2="430" y2="373" stroke="#3f8f5a" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ahg)"/>
+<text x="438" y="394" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#3f8f5a" text-anchor="start" xml:space="preserve" style="white-space:pre">callback_ set to true;</text>
+<text x="438" y="410" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#3f8f5a" text-anchor="start" xml:space="preserve" style="white-space:pre">the waiting future returns</text>
+<rect x="20" y="430" width="520" height="130" rx="6" fill="#fcf3e0" stroke="#d2ac5c" stroke-width="1.3"/>
+<text x="34" y="452" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">DiskScheduler</text>
+<rect x="509" y="436" width="25" height="18" rx="9" fill="#3d4a5c"/>
+<text x="521.4" y="449" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle" xml:space="preserve" style="white-space:pre">P1</text>
+<text x="34" y="474" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">request_queue_ (Channel)</text>
+<rect x="34" y="484" width="64" height="36" rx="3" fill="#fff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="66" y="507" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">R p12</text>
+<rect x="102" y="484" width="64" height="36" rx="3" fill="#fff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="134" y="507" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">W p3</text>
+<rect x="170" y="484" width="64" height="36" rx="3" fill="#fff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="202" y="507" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">R p9</text>
+<rect x="238" y="484" width="64" height="36" rx="3" fill="#fff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="270" y="507" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">…</text>
+<line x1="306" y1="502" x2="339" y2="502" stroke="#4a4a46" stroke-width="1.3" marker-end="url(#ah)"/>
+<rect x="340" y="482" width="180" height="44" rx="6" fill="#ffffff" stroke="#9a9a94" stroke-width="1.3"/>
+<text x="350" y="502" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">worker thread</text>
+<text x="350" y="519" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">background_thread_</text>
+<text x="34" y="547" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">DiskRequest: is_write_ · data_ · page_id_ · callback_ (std::promise&lt;bool&gt;)</text>
+<rect x="575" y="475" width="165" height="58" rx="6" fill="#fcf3e0" stroke="#d2ac5c" stroke-width="1.3"/>
+<text x="585" y="495" font-family="ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="700" fill="#1d1d1d" text-anchor="start" xml:space="preserve" style="white-space:pre">DiskManager</text>
+<text x="585" y="512" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" font-weight="400" fill="#5e5e5a" text-anchor="start" xml:space="preserve" style="white-space:pre">ReadPage / WritePage</text>
+<line x1="520" y1="504" x2="574" y2="504" stroke="#4a4a46" stroke-width="1.3" marker-end="url(#ah)"/>
+<path d="M602,570 a55.0,8 0 0,0 110,0 v46 a55.0,8 0 0,1 -110,0 z" fill="#fcf3e0" stroke="#d2ac5c" stroke-width="1.3"/>
+<ellipse cx="657.0" cy="570" rx="55.0" ry="8" fill="#fcf3e0" stroke="#d2ac5c" stroke-width="1.3"/>
+<text x="657.0" y="603.0" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" font-weight="400" fill="#1d1d1d" text-anchor="middle" xml:space="preserve" style="white-space:pre">database file</text>
+<line x1="657" y1="533" x2="657" y2="561" stroke="#4a4a46" stroke-width="1.3" marker-end="url(#ah)"/>
+</svg>
